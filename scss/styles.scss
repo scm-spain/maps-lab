@@ -1,0 +1,362 @@
+.has-active-panels .panel-overlay {
+	z-index: 10 !important;
+}
+
+// Atención: el clearfix ya lo tenemos en la solución de fotocasa
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+ 
+.clearfix:after {
+  clear: both;
+}
+ 
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+
+// Necesario para que el mapa de leaflet se pinte en IE
+#map,
+#map-wrapper {
+    height: 100%;
+}
+
+.mymap {
+	height: 100%;
+	overflow: hidden;
+}
+
+[role="main"] a i,
+[role="toolbar-secondary"] a i {
+    margin-right: 4px;
+}
+
+header {
+	position: relative;
+	width: 100%;
+	z-index: 1;
+	background-color: #fff;
+}
+
+//Situamos el mapa al 100%.
+.site-wrapper-maps {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 0;
+}
+
+// Situamos la navegación por vistas fuera del mapa
+.grid-modes.grid-modes--map {
+	margin-right: 16px;
+	display: block;
+}
+
+// Situamos la navegación por vistas dentro del mapa en el responsive (de entrada lo tenemos oculto)
+.toolbar-secondary_contextual_grid-modes--intoMap {
+	position: absolute;
+	overflow: hidden;
+	z-index: 1;
+	right: 16px;
+	top: 8px;
+	display: none;
+}
+
+// Cambiamos entre navagación por vistas dentro/fuera mapa según breakpoint
+@media screen and (max-width: 1290px) {
+	.toolbar-secondary_contextual_grid-modes--intoMap {
+		display: block;
+	}
+
+	.grid-modes.grid-modes--map {
+		display: none;
+	}
+
+	.grid-modes--map.grid-modes--map-resp {
+		display: block;
+		background-color: rgba(255,255,255,0.9);
+		padding: 8px;
+		border-radius: 8px;
+		margin-right: 0;
+	}
+}
+
+//Inicio de la toolbar secundaria
+.toolbar-secondary {
+  background-color: #f5f5f5;
+  padding: 8px 16px;
+}
+
+//Colocamos en la toolbar secundaria la localización
+.toolbar-secondary_location {
+	padding: 4px 0;
+	overflow: hidden;
+}
+
+.toolbar-secondary_location-zone {
+	float: left;
+}
+
+.toolbar-secondary_location-zone h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4em;
+    margin-bottom: 8px;
+}
+
+.toolbar-secondary_contextual_save-search,
+.toolbar-secondary_contextual_grid-modes,
+.toolbar-secondary_filters {
+    float: left;
+}
+
+.toolbar-secondary_contextual_grid-modes {
+    padding: 8px 0;
+    display: block;
+}
+
+.toolbar-secondary_contextual [class^="fc-icon-"],
+.toolbar-secondary_filters [class^="fc-icon-"] {
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.toolbar-secondary_contextual {
+  box-sizing: border-box;
+  float: right;
+}
+
+.header a:hover {
+  background-color: transparent !important;
+}
+
+.filters_group {
+	float: left;
+  	vertical-align: top;
+  	margin: 0 16px 0 0;
+}
+
+.filters_group_item li {
+  float: left;
+  margin-right: 8px;
+  margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+}
+
+.filters_group_footer {
+	display: none;
+}
+
+[data-toexpand="filters"] {
+	display: none;
+}
+
+//Iniciamos el panel-group collapsable
+
+.collapsable {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 48px;
+    padding: 8px 24px 8px 8px;
+    position: relative;
+    vertical-align: middle;
+    transition: all 0.3s;
+
+    	&:hover {
+    		background-color: transparentize(#b7e1f4, 0.8);
+    	}
+}
+
+.collapsable:after {
+	color: #333;
+    content: "\e048";
+    font-family: "fotocasa-iconset-web";
+    font-size: 12px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transition: all 0.3s;
+    transform: translateY(-50%) rotateZ(0);
+}
+
+.collapsable.is-active {
+	background-color: #b7e1f4;
+}
+
+.is-active.collapsable:after{
+	transform: translateY(-50%) rotateZ(180deg);
+}
+
+
+
+.dropdown_panel.dropdown_panel-group {
+	padding: 16px 8px;
+    z-index: 9 !important;
+    width: 320px;
+    box-sizing: border-box;
+
+    	h3 {
+    		margin: 12px 0 8px;
+    		font-size: 14px;
+    	}
+}
+
+.dropdown_panel-group--footer {
+	text-align: center;
+	margin-top: 16px;
+}
+
+.dropdown_panel-close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	cursor: pointer;
+	
+}
+
+.dropdown_panel-close span {
+	text-transform: uppercase;
+	font-size: 10px;
+	padding-right: 4px;
+	vertical-align: top;
+}
+
+.dropdown_panel-close:after {
+	content:"\00d7";
+	font-size: 32px;
+	line-height: 0.6;
+}
+
+.panel_group {
+	overflow: hidden;
+	margin: 0 -4px;
+}
+
+.panel_group--g2 {
+	float: left;
+	width: 50%;
+}
+
+.panel_group--g1,
+.panel_group--g2 {
+	margin: 0 0 8px;
+}
+
+.panel_group--g2 > div,
+.panel_group--g1 > div {
+	margin: 0 4px;
+}
+
+.panel_group--g1 .dropdown {
+	display: block;
+	
+}
+
+.panel_group--g2 > div.panel_group_checkradio {
+	background-color: #f5f5f5;
+	padding: 4px;
+	margin: 0 4px;
+}
+
+.panel_group--g2 span.dropdown {
+	display: block;
+}
+
+@media screen and (max-width: 990px) {
+	
+    .filters_group {
+    	display: none;
+    }
+
+    .toolbar-secondary_filters-wrapper--active .filters_group {
+    	position: absolute;
+    	left: 0;
+    	top: 100%;
+    	display: block;
+    	z-index: 2;
+    	width: 100%;
+    }
+
+    .filters_group_background {
+    	background: none repeat scroll 0 0 #f5f5f5;
+    	bottom: 0;
+    	height: 100%;
+    	position: fixed;
+    	width: 100%;
+    	z-index: -1;
+    	top: 114px;
+    }
+
+    .toolbar-secondary_filters-wrapper--active .filters_group_item {
+    	padding: 0 16px;
+    }
+
+    .toolbar-secondary_filters-wrapper--active .filters_group_footer {
+    	display: block;
+    	width: 100%;
+    	position: fixed;
+    	bottom: 0;
+    	background-color: #eaeaea;
+    	padding: 8px 16px;
+    	display: block;
+    	text-align: right;
+    	box-sizing: border-box;
+    }
+
+    .toolbar-secondary_filters-wrapper--active .dropdown,
+    .toolbar-secondary_filters-wrapper--active .collapsable {
+    	display: block;
+    }
+
+    .toolbar-secondary_filters-wrapper--active .filters_group_item li {
+    	float: none;
+    	margin: 4px 0;
+    }
+
+    [data-toexpand="filters"] {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 360px ) {
+    .grid-modes--map-resp li > i{
+        display: none,
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+	.dropdown_panel {
+		z-index: 11;
+	}
+	.dropdown_panel.dropdown_panel-group {
+    left: 0 !important;
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    top: 0 !important;
+    bottom: 0 !important;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-color: white;
+    margin: 0;
+    max-height: 100%;
+    transform: translate3d(0px, 0px, 0px);
+    cursor: pointer;
+	}
+}

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta content="Más de 1.220.000 pisos en venta y alquiler, casas y apartamentos nuevos o de segunda mano. Vende o alquila tu piso GRATIS!" name="description">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <title>fotocasa.es - venta alquiler pisos madrid, barcelona casas viviendas</title>
+    <link href="http://www.fotocasa.es/" rel="canonical">
+    <link href="http://m.fotocasa.es/" media="only screen and (max-width: 640px)" rel="alternate">
+    <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico">
+    <link title="Buscar pisos en Fotocasa.es" type="application/opensearchdescription+xml" href="/xml/openSearchFotocasa.xml" rel="search">
+    <link href="http://www.fotocasa.es/mvc/content/themes/fotocasa/views/baselayout.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.fotocasa.es/mvc/Content/themes/fotocasaOld/Pages/search-results.css">
+    <link rel="stylesheet" href="http://www.fotocasa.es/mvc/content/themes/fotocasaOld/Modules/search-grid.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />   
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" href="/MVC/content/themes/fotocasa/bundles/oldexplorer/selectors.css" />
+    <![endif]-->
+    
+    <script async="" src="http://b.scorecardresearch.com/beacon.js"></script><script>
+        (function () {
+            var html5Elements = ["article", "aside", "audio", "canvas", "figcaption", "figure", "footer", "header", "hgroup", "main", "mark", "menu", "meter", "nav", "output", "progress", "section", "time", "video"];
+            var len = html5Elements.length;
+            var i = 0;
+
+            for (i; i > len; i++) { document.createElement(html5Elements[i]) }
+        }());
+    </script>
+
+</head>
+<body>
+<header>
+    <div id="toolbar" class="toolbar clearfix">
+        <div class="header_site">
+            <ul>
+                <li class="header_nav_hamburguer">
+                    <a data-xiti-type="Click" data-xiti-tag="toolbar::Hamburguesa::AbrirMenuFotocasa" aria-owns="hamburguer" aria-haspopup="true" id="lnk_hamburguer"><i class="fc-icon-menu"></i></a> 
+                </li>
+                <li class="header_nav_insert">
+                    <a title="Vende o alquila tu piso, casa o chalet en fotocasa. Anunciar es gratis y muy fácil" target="_parent" id="btn-advertise-your-flat" href="http://www.fotocasa.es/publica-tu-inmueble__fotocasa.aspx"><span>Publica tu inmueble</span></a>
+                </li>
+                <li class="header_nav_search">
+                    <a title="Todos los pisos, casas, chalets y apartamentos en venta y alquiler" target="_parent" id="lnk-header-Search" href="http://www.fotocasa.es/"><i class="fc-icon-search"></i> <span>fotocasa</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="header_logo">
+            <a href="http://www.fotocasa.es/" id="lnk-homepage">
+                <img width="126" height="28" class="fotocasa-logo" alt="fotocasa.es" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH4AAAAcBAMAAABVMRbqAAAALVBMVEUAAAAALWIALWIALWIALWIALWIALWIALWIALWIALWIALWIALWIALWIALWIALWKmyCTnAAAADnRSTlMAgMVAEDCnYCDr2HBQjx5p194AAAK0SURBVDjLxZTPaxNBFMef2W1daZXk0HpoWdq9teCSEg9SpQQExUJltXgSSgjiMaRKryUgeFGKP3qTFgQPnoKCHrxIr4IUvXgsydomTazfv8H3nVnTlKDSeug7zM578z5vHjPfWRHpKwEv83Jk28R4iJ0j4y5i6UdrPzB4OH4ATXGAcidQPByfwndxg6DDz8aH488o32Ve9f/4Ezgm/mJmqZt33p6NbMLjzH3zvZxE3KnMBX4fZEYrIjCWdksAnor4oI3JFQCtNNOmATRUXg8Z2RDxQgA1G48jCUK09fQXUL/l45XcmwCC4EsfMHQDbcVOoj5fUnkxMo09kQWsDaOmcSwtYzfp36UAHMS/+7/OzBmMcSjINbTlFBriUWZhKy9zNVlBU2s0DE+qLbqEcsJvEU2hyVgkp4HsJh0g8lDX9UgzdtmT4Tn80OgyniQ88Iatt5jC6khvMS1E1kmkXuUZdPgFHTjuWN4BsmaMbGPWyKc1eCfxuniehOnC8gNA3nbRT7ebFwDlHt5HzfB18qZhu5xO9fA+EGf/xP/8C3+7SKHwMDVNbWoSPXyjl+cs0VFAXj4BKIh8oP/v/u1JCLd9JyF514fmzVKMHf4jtg/ypMgrtmH4Zb0by4tXQktKWJV9foaDamqv+/48ZQfZK22dX8uzvMdbcA/oh1W2LS9cFWXzLriv7YX55FmMOzDB8h3VFmTAzErUbz/l7fMVkecaHyq9kHxZUh3eZTkPiNh6Rd8PgyvcehZ4LuJJVZ0Z5Z2mqKgbCqyKb3kr3T29oabZ6MUlVTk2nCrKSlaBZ0FMdhLrymPtM9/OFjDR3uf7QgCtLCsZldwEuLHaHGcNvne8tvoH4oqRUYG8kzsvvJTF4oj9PS0Wv+rk0fD4ezF2dfjcSEU/30ZlPlfR31mgribcHZJc7hfDTwfIxXt3pwAAAABJRU5ErkJggg==">
+                <img width="90" height="20" class="fotocasa-logo-xs" alt="fotocasa.es" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH4AAAAcBAMAAABVMRbqAAAALVBMVEUAAAAALWIALWIALWIALWIALWIALWIALWIALWIALWIALWIALWIALWIALWIALWKmyCTnAAAADnRSTlMAgMVAEDCnYCDr2HBQjx5p194AAAK0SURBVDjLxZTPaxNBFMef2W1daZXk0HpoWdq9teCSEg9SpQQExUJltXgSSgjiMaRKryUgeFGKP3qTFgQPnoKCHrxIr4IUvXgsydomTazfv8H3nVnTlKDSeug7zM578z5vHjPfWRHpKwEv83Jk28R4iJ0j4y5i6UdrPzB4OH4ATXGAcidQPByfwndxg6DDz8aH488o32Ve9f/4Ezgm/mJmqZt33p6NbMLjzH3zvZxE3KnMBX4fZEYrIjCWdksAnor4oI3JFQCtNNOmATRUXg8Z2RDxQgA1G48jCUK09fQXUL/l45XcmwCC4EsfMHQDbcVOoj5fUnkxMo09kQWsDaOmcSwtYzfp36UAHMS/+7/OzBmMcSjINbTlFBriUWZhKy9zNVlBU2s0DE+qLbqEcsJvEU2hyVgkp4HsJh0g8lDX9UgzdtmT4Tn80OgyniQ88Iatt5jC6khvMS1E1kmkXuUZdPgFHTjuWN4BsmaMbGPWyKc1eCfxuniehOnC8gNA3nbRT7ebFwDlHt5HzfB18qZhu5xO9fA+EGf/xP/8C3+7SKHwMDVNbWoSPXyjl+cs0VFAXj4BKIh8oP/v/u1JCLd9JyF514fmzVKMHf4jtg/ypMgrtmH4Zb0by4tXQktKWJV9foaDamqv+/48ZQfZK22dX8uzvMdbcA/oh1W2LS9cFWXzLriv7YX55FmMOzDB8h3VFmTAzErUbz/l7fMVkecaHyq9kHxZUh3eZTkPiNh6Rd8PgyvcehZ4LuJJVZ0Z5Z2mqKgbCqyKb3kr3T29oabZ6MUlVTk2nCrKSlaBZ0FMdhLrymPtM9/OFjDR3uf7QgCtLCsZldwEuLHaHGcNvne8tvoH4oqRUYG8kzsvvJTF4oj9PS0Wv+rk0fD4ezF2dfjcSEU/30ZlPlfR31mgribcHZJc7hfDTwfIxXt3pwAAAABJRU5ErkJggg==">
+            </a>
+        </div>
+        <nav class="header_nav">
+            <ul>
+                <li id="dd_user" class="header_nav_user"><a target="_parent" title="Accede a tu cuenta para gestionar tus datos, tus anuncios, tus pisos favoritos o tus búsquedas guardadas" aria-owns="user-login" aria-haspopup="true" id="lnk_account"><i class="fc-icon-user"></i><span class="header_nav_label"></span></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="toolbar_secondary" class="toolbar-secondary clearfix" role="toolbar_secondary">
+        <div class="toolbar-secondary_location">
+            <div class="toolbar-secondary_location-zone">
+                <h1><strong>348 inmuebles</strong> en Sitges</h1>
+            </div>
+        </div>
+        <nav class="toolbar-secondary_filters">
+            <div class="toolbar-secondary_filters--rwd">
+                <a class="button button--primary" data-toexpand="filters"><i class="fc-icon-filter"></i><span>Filtrar</span></a>
+            </div>
+            <div class="toolbar-secondary_filters-wrapper">
+                <div class="filters_group">
+                    <ul class="filters_group_item">
+                    <!-- aquí empieza el grupo: PRECIO -->
+                        <li>
+                            <span aria-haspopup="true" data-panel="dropdown" aria-owns="panel-price-wrapper" id="price" class="collapsable" data-widget="collapsable">
+                                <span style="font-size: 12px; color: #666">
+                                <h4 style="font-size: 14px; margin:0; color: #333">Precio, Transacción</h4>
+                                    <strong>Ej.</strong> 600€/mes, Alquiler, Venta...
+                                </span>
+                            </span>
+                            <div id="panel-price-wrapper" class="dropdown_panel dropdown_panel-group" data-widget="panel-collapsable" data-panel-group="true">
+                            <div class="dropdown_panel-close" data-collapsable-close="true"></div>
+                            <h3>Precio:</h3>
+                            <ul class="panel_group">
+                                <li class="panel_group--g2">
+                                    <div>
+                                        <span aria-haspopup="true" data-haspopup="true" data-panel="dropdown" aria-owns="panel-price-from" class="dropdown" id="price-from">
+                                            <span data-select-list="dropdown-price-from">
+                                                Desde
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div id="panel-price-from" class="dropdown_panel panel_small" data-widget="panel" data-panel-group-item="true">
+                                        <div class="o-link-list">
+                                            <ul data-select="list" id="dropdown-price-from">
+                                                <li><label><input type="radio" name="switch-price-from">50.000 €</label></li>
+                                                <li><label><input type="radio" name="switch-price-from">100.000 €</label></li>
+                                                <li><label><input type="radio" name="switch-price-from">150.000 €</label></li>
+                                                <li><label><input type="radio" name="switch-price-from">200.000 €</label></li>
+                                                <li><label><input type="radio" name="switch-price-from">250.000 €</label></li>
+                                                <li><label><input type="radio" name="switch-price-from">300.000 €</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                 <li class="panel_group--g2">
+                                    <div>
+                                        <span aria-haspopup="true" data-haspopup="true" data-panel="dropdown" aria-owns="panel-price-to" class="dropdown" id="price-to">
+                                            <span data-select-list="dropdown-price-to">
+                                                Hasta
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div id="panel-price-to" class="dropdown_panel panel_small" data-widget="panel" data-panel-group-item="true">
+                                        <div class="o-link-list">
+                                            <ul data-select="list" id="dropdown-price-to">
+                                                <li><label><input type="radio" name="switch-price-to">50.000 €</label></li>
+                                                <li><label><input type="radio" name="switch-price-to">100.000 €</label></li>
+                                                <li><label><input type="radio" name="switch-price-to">150.000 €</label></li>
+                                                <li><label><input type="radio" name="switch-price-to">200.000 €</label></li>
+                                                <li><label><input type="radio" name="switch-price-to">250.000 €</label></li>
+                                                <li><label><input type="radio" name="switch-price-to">300.000 €</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div data-component="switchlist" class="o-checklist">
+                            <ul class="panel_group">
+                                    <li class="panel_group--g1" style="display: inline-block">
+                                        <div class="panel_group_checkradio">
+                                            <input type="checkbox" name="price-extra-1" id="price-extra-1">
+                                                <label for="price-extra-1">Han bajado de precio</label>
+                                        </div>
+                                    </li>
+                                    <li class="panel_group--g1" style="display: inline-block">
+                                        <div class="panel_group_checkradio">
+                                            <input type="checkbox" name="price-extra-2" id="price-extra-2">
+                                                <label for="price-extra-2">Por debajo del precio medio</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3>Transacción:</h3>
+                            <ul class="panel_group">
+                                <li class="panel_group--g1">
+                                    <div>
+                                        <span aria-haspopup="true" data-haspopup="true" data-panel="dropdown" aria-owns="panel-transaction" class="dropdown" id="dropdown-urology">
+                                            <span data-select-list="dropdown-transaction">
+                                                <i>Compra, venta...</i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div id="panel-transaction" class="dropdown_panel panel_small" data-widget="panel" data-panel-group-item="true">
+                                        <div class="o-link-list">
+                                            <ul data-select="list" id="dropdown-transaction">
+                                                <li><label><input type="radio" name="switch-transaction">Venta</label></li>
+                                                <li><label><input type="radio" name="switch-transaction">Alquiler</label></li>
+                                                <li><label><input type="radio" name="switch-transaction">Traspaso</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="dropdown_panel-group--footer">
+                                <a class="button button--primary">Aplicar filtros</a>
+                            </div>
+                            </div>
+                        </li>
+                        <!-- aquí FIN el grupo: PRECIO -->
+                        <!-- aquí empieza el grupo: TIPO DE INMUEBLE -->
+                        <li>
+                            <span aria-haspopup="true" data-panel="dropdown" aria-owns="panel-surface-wrapper" id="superficie" class="collapsable" data-widget="collapsable">
+                                <span style="font-size: 12px; color: #666">
+                                <h4 style="font-size: 14px; margin:0; color: #333">Habs., Baños, Sup.</h4>
+                                    <strong>Ej.</strong> 4 habs, 2 baños, 120 m<sup>2</sup>...
+                                </span>
+                            </span>
+                            <div id="panel-surface-wrapper" class="dropdown_panel dropdown_panel-group" data-widget="panel-collapsable" data-panel-group="true">
+                            <div class="dropdown_panel-close" data-collapsable-close="true"></div>
+                            <h3>Habitaciones:</h3>
+                            <div data-component="switchlist" class="o-radiolist-group o-radiolist-group--inline" id="divRoomsList">
+                                <ul data-select="list" id="ddlRooms">
+                                    <li><input type="radio" onclick="ShowLoading(); AutoClick($('.hiddenlink A').attr('id'),'http://www.fotocasa.es/viviendas/barcelona-capital/alquiler/listado?opi=36&amp;minr=1&amp;llm=724,9,8,232,376,8019,0,0,0&amp;crp=1&amp;fss=true&amp;ts=barcelona&amp;cu=es-es&amp;mode=1&amp;pbti=2&amp;pbsi=3&amp;nhtti=3&amp;craap=1&amp;fss=true&amp;fs=true&amp;lon=0&amp;lat=0');" value="1" name="ctl00$content1$uc_FiltersTop$ddlRooms" id="ddlRooms_0"><label for="ddlRooms_0">1+</label></li>
+                                    <li><input type="radio" onclick="ShowLoading(); AutoClick($('.hiddenlink A').attr('id'),'http://www.fotocasa.es/viviendas/barcelona-capital/alquiler/listado?opi=36&amp;minr=2&amp;llm=724,9,8,232,376,8019,0,0,0&amp;crp=1&amp;fss=true&amp;ts=barcelona&amp;cu=es-es&amp;mode=1&amp;pbti=2&amp;pbsi=3&amp;nhtti=3&amp;craap=1&amp;fss=true&amp;fs=true&amp;lon=0&amp;lat=0');" value="2" name="ctl00$content1$uc_FiltersTop$ddlRooms" id="ddlRooms_1"><label for="ddlRooms_1">2+</label></li>
+                                    <li><input type="radio" onclick="ShowLoading(); AutoClick($('.hiddenlink A').attr('id'),'http://www.fotocasa.es/viviendas/barcelona-capital/alquiler/listado?opi=36&amp;minr=3&amp;llm=724,9,8,232,376,8019,0,0,0&amp;crp=1&amp;fss=true&amp;ts=barcelona&amp;cu=es-es&amp;mode=1&amp;pbti=2&amp;pbsi=3&amp;nhtti=3&amp;craap=1&amp;fss=true&amp;fs=true&amp;lon=0&amp;lat=0');" value="3" name="ctl00$content1$uc_FiltersTop$ddlRooms" id="ddlRooms_2"><label for="ddlRooms_2">3+</label></li>
+                                    <li><input type="radio" onclick="ShowLoading(); AutoClick($('.hiddenlink A').attr('id'),'http://www.fotocasa.es/viviendas/barcelona-capital/alquiler/listado?opi=36&amp;minr=4&amp;llm=724,9,8,232,376,8019,0,0,0&amp;crp=1&amp;fss=true&amp;ts=barcelona&amp;cu=es-es&amp;mode=1&amp;pbti=2&amp;pbsi=3&amp;nhtti=3&amp;craap=1&amp;fss=true&amp;fs=true&amp;lon=0&amp;lat=0');" value="4" name="ctl00$content1$uc_FiltersTop$ddlRooms" id="ddlRooms_3"><label for="ddlRooms_3">4+</label></li>
+                                </ul>
+                            </div>
+                            <h3>Baños:</h3>
+                            <div id="divBaths">
+                                <div data-component="switchlist" class="o-radiolist-group o-radiolist-group--inline" id="divBathsList">
+                                    <ul onchange="FTC.Xiti('filtros_Banos','click');" data-select="list" id="ddlBaths">
+                                        <li><input type="radio" onclick="ShowLoading(); AutoClick($('.hiddenlink A').attr('id'),'http://www.fotocasa.es/viviendas/barcelona-capital/alquiler/listado?opi=36&amp;minb=1&amp;llm=724,9,8,232,376,8019,0,0,0&amp;crp=1&amp;fss=true&amp;ts=barcelona&amp;cu=es-es&amp;mode=1&amp;pbti=2&amp;pbsi=3&amp;nhtti=3&amp;craap=1&amp;fss=true&amp;fs=true&amp;lon=0&amp;lat=0');" value="1" name="ctl00$content1$uc_FiltersTop$ddlBaths" id="ddlBaths_0"><label for="ddlBaths_0">1+</label></li>
+                                        <li><input type="radio" onclick="ShowLoading(); AutoClick($('.hiddenlink A').attr('id'),'http://www.fotocasa.es/viviendas/barcelona-capital/alquiler/listado?opi=36&amp;minb=2&amp;llm=724,9,8,232,376,8019,0,0,0&amp;crp=1&amp;fss=true&amp;ts=barcelona&amp;cu=es-es&amp;mode=1&amp;pbti=2&amp;pbsi=3&amp;nhtti=3&amp;craap=1&amp;fss=true&amp;fs=true&amp;lon=0&amp;lat=0');" value="2" name="ctl00$content1$uc_FiltersTop$ddlBaths" id="ddlBaths_1"><label for="ddlBaths_1">2+</label></li>
+                                        <li><input type="radio" onclick="ShowLoading(); AutoClick($('.hiddenlink A').attr('id'),'http://www.fotocasa.es/viviendas/barcelona-capital/alquiler/listado?opi=36&amp;minb=3&amp;llm=724,9,8,232,376,8019,0,0,0&amp;crp=1&amp;fss=true&amp;ts=barcelona&amp;cu=es-es&amp;mode=1&amp;pbti=2&amp;pbsi=3&amp;nhtti=3&amp;craap=1&amp;fss=true&amp;fs=true&amp;lon=0&amp;lat=0');" value="3" name="ctl00$content1$uc_FiltersTop$ddlBaths" id="ddlBaths_2"><label for="ddlBaths_2">3+</label></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <h3>Superfície:</h3>
+                            <ul class="panel_group">
+                                <li class="panel_group--g2">
+                                    <div>
+                                        <span aria-haspopup="true" data-haspopup="true" data-panel="dropdown" aria-owns="panel-surface-from" class="dropdown" id="price-from">
+                                            <span data-select-list="dropdown-surface-from">
+                                                Desde
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div id="panel-surface-from" class="dropdown_panel panel_small" data-widget="panel" data-panel-group-item="true">
+                                        <div class="o-link-list">
+                                            <ul data-select="list" id="dropdown-surface-from">
+                                                <li><label><input type="radio" name="switch-surface-from">Desde 30 m2</label></li>
+                                                <li><label><input type="radio" name="switch-surface-from">Desde 60 m2</label></li>
+                                                <li><label><input type="radio" name="switch-surface-from">Desde 90 m2</label></li>
+                                                <li><label><input type="radio" name="switch-surface-from">Desde 120 m2</label></li>
+                                                <li><label><input type="radio" name="switch-surface-from">Desde 150 m2</label></li>
+                                                <li><label><input type="radio" name="switch-surface-from">Desde 180 m2</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                 <li class="panel_group--g2">
+                                    <div>
+                                        <span aria-haspopup="true" data-haspopup="true" data-panel="dropdown" aria-owns="panel-surface-to" class="dropdown" id="surface-to">
+                                            <span data-select-list="dropdown-surface-to">
+                                                Hasta
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div id="panel-surface-to" class="dropdown_panel panel_small" data-widget="panel" data-panel-group-item="true">
+                                        <div class="o-link-list">
+                                            <ul data-select="list" id="dropdown-surface-to">
+                                                <li><label><input type="radio" name="switch-surface-to">Hasta 50 m2</label></li>
+                                                <li><label><input type="radio" name="switch-surface-to">Hasta 80 m2</label></li>
+                                                <li><label><input type="radio" name="switch-surface-to">Hasta 110 m2</label></li>
+                                                <li><label><input type="radio" name="switch-surface-to">Hasta 140 m2</label></li>
+                                                <li><label><input type="radio" name="switch-surface-to">Hasta 170 m2</label></li>
+                                                <li><label><input type="radio" name="switch-surface-to">Hasta 200 m2</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="dropdown_panel-group--footer">
+                                <a class="button button--primary">Aplicar filtros</a>
+                            </div>
+                            </div>
+                        </li>
+                       
+                        <!-- aquí FIN el grupo: TIPO DE INMUEBLE -->
+                        <!-- aquí empieza el grupo: TIPO DE INMUEBLE -->
+                      
+                        <li>
+                            <span aria-haspopup="true" data-panel="dropdown" aria-owns="panel-tipology-wrapper" id="tipo-de-inmueble" class="collapsable" data-widget="collapsable">
+                                <span style="font-size: 12px; color: #666">
+                                <h4 style="font-size: 14px; margin:0; color: #333">Tipo de inmueble</h4>
+                                    <strong>Ej.</strong> Ático, Obra nueva...
+                                </span>
+                            </span>
+                            <div id="panel-tipology-wrapper" class="dropdown_panel dropdown_panel-group" data-widget="panel-collapsable" data-panel-group="true">
+                            <div class="dropdown_panel-close" data-collapsable-close="true"></div>
+                            <h3>Tipo de inmueble:</h3>
+                            <ul class="panel_group">
+                                <li class="panel_group--g1">
+                                    <div>
+                                        <span aria-haspopup="true" data-haspopup="true" data-panel="dropdown" aria-owns="panel-tipology" class="dropdown" id="tipology">
+                                            <span data-select-list="dropdown-tipology">
+                                                <i>Inmueble</i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div id="panel-tipology" class="dropdown_panel panel_small" data-widget="panel" data-panel-group-item="true">
+                                        <div class="o-link-list">
+                                            <ul data-select="list" id="dropdown-tipology">
+                                                <li><label><input type="radio" name="switch-tipology">Viviendas</label></li>
+                                                <li><label><input type="radio" name="switch-tipology">Obra Nueva</label></li>
+                                                <li><label><input type="radio" name="switch-tipology">Garajes</label></li>
+                                                <li><label><input type="radio" name="switch-tipology">Locales</label></li>
+                                                <li><label><input type="radio" name="switch-tipology">Terrenos</label></li>
+                                                <li><label><input type="radio" name="switch-tipology">Oficinas</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                                <h3>Tipo de vivienda:</h3>
+                            <div data-component="switchlist" class="o-checklist">
+                                <ul class="panel_group">
+                                    <li class="panel_group--g2">
+                                        <div class="panel_group_checkradio">
+                                            <input type="checkbox" name="subtype-1" id="subtype-1">
+                                                <label for="subtype-1">Apartamento</label>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="panel_group--g2">
+                                        <div class="panel_group_checkradio">
+                                            <input type="checkbox" name="subtype-2" id="subtype-2">
+                                                <label for="subtype-2">Ático</label>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="panel_group--g2">
+                                        <div class="panel_group_checkradio">
+                                            <input type="checkbox" name="subtype-3" id="subtype-3">
+                                                <label for="subtype-3">Casa adosada</label>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="panel_group--g2">
+                                        <div class="panel_group_checkradio">
+                                            <input type="checkbox" name="subtype-4" id="subtype-4">
+                                                <label for="subtype-4">Casa-chalet</label>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="panel_group--g2">
+                                        <div class="panel_group_checkradio">
+                                            <input type="checkbox" name="subtype-5" id="subtype-5">
+                                                <label for="subtype-5">Dúplex</label>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="panel_group--g2">
+                                        <div class="panel_group_checkradio">
+                                            <input type="checkbox" name="subtype-6" id="subtype-6">
+                                                <label for="subtype-6">Estudio</label>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="panel_group--g2">
+                                        <div class="panel_group_checkradio">
+                                            <input type="checkbox" name="subtype-7" id="subtype-7">
+                                                <label for="subtype-7">Finca rústica</label>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="panel_group--g2">
+                                        <div class="panel_group_checkradio">
+                                            <input type="checkbox" name="subtype-8" id="subtype-8">
+                                                <label for="subtype-8">Loft</label>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="panel_group--g2">
+                                        <div class="panel_group_checkradio">
+                                            <input type="checkbox" name="subtype-9" id="subtype-9">
+                                                <label for="subtype-9">Piso</label>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="panel_group--g2">
+                                        <div class="panel_group_checkradio">
+                                            <input type="checkbox" name="subtype-10" id="subtype-10">
+                                                <label for="subtype-10">Planta baja</label>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="panel_group--g2">
+                                        <div class="panel_group_checkradio">
+                                            <input type="checkbox" name="subtype-11" id="subtype-11">
+                                                <label for="subtype-11">Terreno</label>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="panel_group--g2">
+                                        <div class="panel_group_checkradio">
+                                            <input type="checkbox" name="subtype-12" id="subtype-12">
+                                                <label for="subtype-12">Terreno residencial</label>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="dropdown_panel-group--footer">
+                                <a class="button button--primary">Aplicar filtros</a>
+                            </div>
+                            </div>
+                        </li>
+                        <!-- aquí FIN el grupo: TIPO DE INMUEBLE -->
+                        <!-- aquí empieza el grupo: EXTRAS -->
+                        <li>
+                            <span aria-haspopup="true" data-panel="dropdown" aria-owns="panel-extras-wrapper" id="extras" class="collapsable" data-widget="collapsable">
+                                <span style="font-size: 12px; color: #666">
+                                <h4 style="font-size: 14px; margin:0; color: #333">Extras, Estado</h4>
+                                    <strong>Ej.</strong> Ascensor, Reformado...
+                                </span>
+                            </span>
+                            <div id="panel-extras-wrapper" class="dropdown_panel dropdown_panel-group" data-widget="panel-collapsable" data-panel-group="true">
+                            <div class="dropdown_panel-close" data-collapsable-close="true"></div>
+                            <h3>Extras:</h3>
+                            <div data-component="switchlist" class="o-checklist">
+                            <ul class="panel_group">
+                                <li class="panel_group--g2">
+                                    <div class="panel_group_checkradio">
+                                        <input type="checkbox" name="extras-1" id="extras-1">
+                                            <label for="extras-1">Ascensor</label>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="panel_group--g2">
+                                    <div class="panel_group_checkradio">
+                                        <input type="checkbox" name="extras-2" id="extras-2">
+                                            <label for="extras-2">Parking</label>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="panel_group--g2">
+                                    <div class="panel_group_checkradio">
+                                        <input type="checkbox" name="extras-3" id="extras-3">
+                                            <label for="extras-3">Amueblado</label>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="panel_group--g2">
+                                    <div class="panel_group_checkradio">
+                                        <input type="checkbox" name="extras-4" id="extras-4">
+                                            <label for="extras-4">Terraza</label>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="panel_group--g2">
+                                    <div class="panel_group_checkradio">
+                                        <input type="checkbox" name="extras-5" id="extras-5">
+                                            <label for="extras-5">Calefacción</label>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="panel_group--g2">
+                                    <div class="panel_group_checkradio">
+                                        <input type="checkbox" name="extras-6" id="extras-6">
+                                            <label for="extras-6">Piscina</label>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="panel_group--g2">
+                                    <div class="panel_group_checkradio">
+                                        <input type="checkbox" name="extras-7" id="extras-7">
+                                            <label for="extras-7">Jardín</label>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="panel_group--g2">
+                                    <div class="panel_group_checkradio">
+                                        <input type="checkbox" name="extras-8" id="extras-8">
+                                            <label for="extras-8">Trastero</label>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            </div>
+                                <h3>Estado:</h3>
+                                <div data-component="switchlist" class="o-checklist">
+                            <ul class="panel_group">
+                                <li class="panel_group--g2">
+                                    <div class="panel_group_checkradio">
+                                        <input type="checkbox" name="estat-1" id="estat-1">
+                                            <label for="estat-1">Casi nuevo</label>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="panel_group--g2">
+                                    <div class="panel_group_checkradio">
+                                        <input type="checkbox" name="estat-2" id="estat-2">
+                                            <label for="estat-2">Muy bien</label>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="panel_group--g2">
+                                    <div class="panel_group_checkradio">
+                                        <input type="checkbox" name="estat-3" id="estat-3">
+                                            <label for="estat-3">Bien</label>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="panel_group--g2">
+                                    <div class="panel_group_checkradio">
+                                        <input type="checkbox" name="estat-4" id="estat-4">
+                                            <label for="estat-4">A reformar</label>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="panel_group--g2">
+                                    <div class="panel_group_checkradio">
+                                        <input type="checkbox" name="estat-5" id="estat-5">
+                                            <label for="estat-5">Reformado</label>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            </div>
+                            <h3>Otros filtros:</h3>
+                            <div data-component="switchlist" class="o-checklist">
+                            <ul class="panel_group">
+                                <li class="panel_group--g2">
+                                    <div class="panel_group_checkradio">
+                                        <input type="checkbox" name="other-1" id="other-1">
+                                            <label for="other-1">Con fotos</label>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="panel_group--g2">
+                                    <div class="panel_group_checkradio">
+                                        <input type="checkbox" name="other-2" id="other-2">
+                                            <label for="other-2">Con vídeo</label>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            </div>
+                            <div class="dropdown_panel-group--footer">
+                                <a class="button button--primary">Aplicar filtros</a>
+                            </div>
+                            </div>
+                        </li>
+                        <!-- aquí FIN el grupo: EXTRAS -->
+                    </ul>
+                    <div style="position: relative">
+                        <div class="filters_group_footer">
+                            <a href="#" class="button button--primary">OK</a>
+                        </div>
+                        <div class="filters_group_background"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="toolbar-secondary_contextual">
+            <div class="toolbar-secondary_contextual_grid-modes">
+                <ul class="grid-modes grid-modes--map">
+                    <li onclick="REALESTATE.views.grid_map.SavePosition();FTC.Xiti('filtros_Vista_photo','click'); FTC.GoToNewUrl('http://www.fotocasa.es/viviendas/sabadell/listado?opi=36&amp;llm=724,9,8,227,345,8187,0,0,0&amp;crp=1&amp;pgg=true&amp;ts=Sabadell&amp;cu=es-es&amp;craap=1&amp;fs=true&amp;lon=0&amp;lat=0&amp;mode=1&amp;tta=0');return false;" class="photo-mode" id="divPhotos">
+                        <i class="fc-icon-photos"></i>
+                        <span id="ctl00_content1_photos">Fotos</span>
+                    </li>
+                    
+                    <li onclick="FTC.Xiti('filtros_Vista_list','click'); FTC.GoToNewUrl('http://www.fotocasa.es/viviendas/espana/listado?opi=36&amp;llm=724,0,0,0,0,0,0,0,0&amp;crp=1&amp;pgg=true&amp;t=metrovacesa&amp;cu=es-es&amp;craap=1&amp;fs=false&amp;mode=3&amp;tta=4');return false;" class="list-mode" id="ctl00_content1_divList">
+                        <i class="fc-icon-list"></i>
+                        <span id="ctl00_content1_list">Listado</span>
+                    </li>
+                    <li onclick="REALESTATE.views.grid_map.SavePosition();FTC.Xiti('filtros_Vista_map','click'); FTC.GoToNewUrl('http://www.fotocasa.es/viviendas/sabadell/alquiler/listado?opi=36&amp;llm=724,9,8,227,345,8187,0,0,0&amp;crp=1&amp;pgg=true&amp;ts=Sabadell&amp;cu=es-es&amp;craap=1&amp;fs=true&amp;lon=0&amp;lat=0&amp;mode=2&amp;tta=0');return false;" class="map-mode selected" id="ctl00_content1_divMap">
+                        <i class="fc-icon-location"></i>
+                        <span id="ctl00_content1_map">Mapa</span>
+                    </li>   
+                </ul>
+            </div>
+            <div class="toolbar-secondary_contextual_save-search">
+                <a class="button button--accent"><i class="fc-icon-bell"></i><span>Guardar búsqueda</span></a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div class="site-wrapper-maps">
+    <div class="toolbar-secondary_contextual_grid-modes--intoMap">
+        <nav class="toolbar-secondary_contextual">
+            <div class="grid-modes grid-modes--map grid-modes--map-resp" style="overflow:hidden">
+                <ul>
+                    <li onclick="REALESTATE.views.grid_map.SavePosition();FTC.Xiti('filtros_Vista_photo','click'); FTC.GoToNewUrl('http://www.fotocasa.es/viviendas/sabadell/listado?opi=36&amp;llm=724,9,8,227,345,8187,0,0,0&amp;crp=1&amp;pgg=true&amp;ts=Sabadell&amp;cu=es-es&amp;craap=1&amp;fs=true&amp;lon=0&amp;lat=0&amp;mode=1&amp;tta=0');return false;" class="photo-mode" id="divPhotos">
+                        <i class="fc-icon-photos"></i>
+                        <span id="ctl00_content1_photos">Fotos</span>
+                    </li>
+                    
+                    <li onclick="FTC.Xiti('filtros_Vista_list','click'); FTC.GoToNewUrl('http://www.fotocasa.es/viviendas/espana/listado?opi=36&amp;llm=724,0,0,0,0,0,0,0,0&amp;crp=1&amp;pgg=true&amp;t=metrovacesa&amp;cu=es-es&amp;craap=1&amp;fs=false&amp;mode=3&amp;tta=4');return false;" class="list-mode" id="ctl00_content1_divList">
+                        <i class="fc-icon-list"></i>
+                        <span id="ctl00_content1_list">Listado</span>
+                    </li>
+                    <li onclick="REALESTATE.views.grid_map.SavePosition();FTC.Xiti('filtros_Vista_map','click'); FTC.GoToNewUrl('http://www.fotocasa.es/viviendas/sabadell/alquiler/listado?opi=36&amp;llm=724,9,8,227,345,8187,0,0,0&amp;crp=1&amp;pgg=true&amp;ts=Sabadell&amp;cu=es-es&amp;craap=1&amp;fs=true&amp;lon=0&amp;lat=0&amp;mode=2&amp;tta=0');return false;" class="map-mode selected" id="ctl00_content1_divMap">
+                        <i class="fc-icon-location"></i>
+                        <span id="ctl00_content1_map">Mapa</span>
+                    </li>   
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="map-wrapper" id="map-wrapper">
+        <div id="map" class="mymap"></div>
+    </div>
+</div>
+
+<div id="panel-wrapper">
+<div class="panel-overlay"></div>
+    
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="http://www.fotocasa.es/mvc/scripts/core.js"></script>
+<script src="http://www.fotocasa.es/mvc/scripts/modules/dialog.js"></script>
+<!--
+    <script src="http://dev-dev.fotocasa.es/mvc/scripts/modules/popable.js"></script>
+    <script src="http://dev-dev.fotocasa.es/mvc/scripts/modules/panel.js"></script>
+-->
+    <script src="http://www.fotocasa.es/mvc/scripts/modules/fakeselect.js"></script>
+    <script src="http://www.fotocasa.es/mvc/scripts/modules/switchlist.js"></script>
+<script src="js/scripts.js"></script>
+<script type="text/javascript">
+    var map = L.map("map").setView([40.3964, -3.7129], 14);
+    //console.log('craedo');
+    var urlTemplate = "http://{s}.{base}.maps.cit.api.here.com/maptile/2.1/maptile/{mapID}/normal.day/{z}/{x}/{y}/256/png8?app_id={app_id}&app_code={app_code}";
+
+    L.tileLayer(urlTemplate, {
+        attribution: 'Map &copy; 1987-2014 <a href="http://developer.here.com">HERE</a>',
+        subdomains: '1234',
+        mapID: 'newest',
+        app_id: '7rWg1K2EDx7Xbqvot0rN',
+        app_code: 'zkV5AB57e7U14tY6Y3nLcQ',
+        base: 'base',
+        minZoom: 0,
+        maxZoom: 20,
+        zoom: 14
+    }).addTo(map);
+</script>
+
+<script>
+    REALESTATE.init();
+</script>
+
+</body>
+</html>
